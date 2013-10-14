@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+# currently using un-pushed flaccid fork
+cookbook 'collectd',
+  :git => 'https://github.com/flaccid/chef-collectd',
+  :ref => 'master'
+#cookbook 'collectd',
+#  :git => 'https://github.com/coderanger/chef-collectd',
+#  :ref => 'master'
+
+cookbook 'rest_connection',
+ :git => 'https://github.com/flaccid/cookbooks',
+ :path => 'cookbooks/rest_connection',
+ :ref => 'master'
+
+cookbook 'rightscale'

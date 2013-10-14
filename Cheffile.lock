@@ -1,0 +1,29 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    apache2 (1.8.4)
+    rightscale (0.1.0)
+      collectd (>= 0.0.0)
+      rest_connection (>= 0.0.0)
+
+GIT
+  remote: https://github.com/flaccid/chef-collectd
+  ref: master
+  sha: 7956367a5ad0553f6b1150f27c2d657d49c3618c
+  specs:
+    collectd (1.0.0)
+      apache2 (>= 0.0.0)
+
+GIT
+  remote: https://github.com/flaccid/cookbooks
+  path: cookbooks/rest_connection
+  ref: master
+  sha: 5e5fd5322b0b97a1066377593a75cf0f985bd8a6
+  specs:
+    rest_connection (0.0.1)
+
+DEPENDENCIES
+  collectd (>= 0)
+  rest_connection (>= 0)
+  rightscale (>= 0)
+
